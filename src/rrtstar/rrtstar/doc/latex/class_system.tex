@@ -1,0 +1,211 @@
+\hypertarget{class_system}{\section{System Class Reference}
+\label{class_system}\index{System@{System}}
+}
+
+
+\hyperlink{class_system}{System} Class.  
+
+
+
+
+{\ttfamily \#include $<$system.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_system_af5fb452cbc77888fa8b237728978e5f2}{get\-Num\-Dimensions} ()
+\begin{DoxyCompactList}\small\item\em Returns the dimensionality of the Euclidean space. \end{DoxyCompactList}\item 
+\hyperlink{class_state}{State} \& \hyperlink{class_system_a3886ae2dd386330fcedbb80015c002d5}{get\-Root\-State} ()
+\begin{DoxyCompactList}\small\item\em Returns a reference to the root state. \end{DoxyCompactList}\item 
+int \hyperlink{class_system_a537a5a43d127e9680ac222b313621373}{get\-State\-Key} (\hyperlink{class_state}{State} \&state\-In, double $\ast$state\-Key)
+\begin{DoxyCompactList}\small\item\em Returns the statekey for the given state. \end{DoxyCompactList}\item 
+bool \hyperlink{class_system_a61f712ecec2be0d5a692016a98883505}{is\-Reaching\-Target} (\hyperlink{class_state}{State} \&state\-In)
+\begin{DoxyCompactList}\small\item\em Returns true of the given state reaches the target. \end{DoxyCompactList}\item 
+int \hyperlink{class_system_af69e823ebff537fd14b7129de2d8d24d}{sample\-State} (\hyperlink{class_state}{State} \&random\-State\-Out)
+\begin{DoxyCompactList}\small\item\em Returns a sample state. \end{DoxyCompactList}\item 
+int \hyperlink{class_system_ae6e8fe1ab14336405695ff03e09280cd}{extend\-To} (\hyperlink{class_state}{State} \&state\-From\-In, \hyperlink{class_state}{State} \&state\-Towards\-In, \hyperlink{class_trajectory}{Trajectory} \&trajectory\-Out, bool \&exact\-Connection\-Out)
+\begin{DoxyCompactList}\small\item\em Returns a the cost of the trajectory that connects state\-From\-In and state\-Towards\-In. The trajectory is also returned in trajectory\-Out. \end{DoxyCompactList}\item 
+double \hyperlink{class_system_a54c10d1e2bd5da67907f462a4ee80520}{evaluate\-Extension\-Cost} (\hyperlink{class_state}{State} \&state\-From\-In, \hyperlink{class_state}{State} \&state\-Towards\-In, bool \&exact\-Connection\-Out)
+\begin{DoxyCompactList}\small\item\em Returns the cost of the trajectory that connects state\-From\-In and State\-Towards\-In. \end{DoxyCompactList}\item 
+double \hyperlink{class_system_a59f6ec06d751bd3379b093a1abc7d0e1}{evaluate\-Cost\-To\-Go} (\hyperlink{class_state}{State} \&state\-In)
+\begin{DoxyCompactList}\small\item\em Returns a lower bound on the cost to go starting from state\-In. \end{DoxyCompactList}\item 
+int \hyperlink{class_system_ac692c12db3dae5ecde2889433157029c}{get\-Trajectory} (\hyperlink{class_state}{State} \&state\-From\-In, \hyperlink{class_state}{State} \&state\-To\-In, std\-::list$<$ double $\ast$ $>$ \&trajectory\-Out)
+\begin{DoxyCompactList}\small\item\em Returns the trajectory as a list of double arrays, each with dimension get\-Num\-Dimensions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_system}{System} Class. 
+
+A more elaborate description of the \hyperlink{class_system}{System} class 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_system_a59f6ec06d751bd3379b093a1abc7d0e1}{\index{System@{System}!evaluate\-Cost\-To\-Go@{evaluate\-Cost\-To\-Go}}
+\index{evaluate\-Cost\-To\-Go@{evaluate\-Cost\-To\-Go}!System@{System}}
+\subsubsection[{evaluate\-Cost\-To\-Go}]{\setlength{\rightskip}{0pt plus 5cm}double System\-::evaluate\-Cost\-To\-Go (
+\begin{DoxyParamCaption}
+\item[{{\bf State} \&}]{state\-In}
+\end{DoxyParamCaption}
+)}}\label{class_system_a59f6ec06d751bd3379b093a1abc7d0e1}
+
+
+Returns a lower bound on the cost to go starting from state\-In. 
+
+A more elaborate description.
+
+
+\begin{DoxyParams}{Parameters}
+{\em state\-In} & Starting state \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_system_a54c10d1e2bd5da67907f462a4ee80520}{\index{System@{System}!evaluate\-Extension\-Cost@{evaluate\-Extension\-Cost}}
+\index{evaluate\-Extension\-Cost@{evaluate\-Extension\-Cost}!System@{System}}
+\subsubsection[{evaluate\-Extension\-Cost}]{\setlength{\rightskip}{0pt plus 5cm}double System\-::evaluate\-Extension\-Cost (
+\begin{DoxyParamCaption}
+\item[{{\bf State} \&}]{state\-From\-In, }
+\item[{{\bf State} \&}]{state\-Towards\-In, }
+\item[{bool \&}]{exact\-Connection\-Out}
+\end{DoxyParamCaption}
+)}}\label{class_system_a54c10d1e2bd5da67907f462a4ee80520}
+
+
+Returns the cost of the trajectory that connects state\-From\-In and State\-Towards\-In. 
+
+A more elaborate description.
+
+
+\begin{DoxyParams}{Parameters}
+{\em state\-From\-In} & Initial state \\
+\hline
+{\em state\-Towards\-In} & Final state \\
+\hline
+{\em exact\-Connection\-Out} & Set to true if the initial and the final states can be connected exactly. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_system_ae6e8fe1ab14336405695ff03e09280cd}{\index{System@{System}!extend\-To@{extend\-To}}
+\index{extend\-To@{extend\-To}!System@{System}}
+\subsubsection[{extend\-To}]{\setlength{\rightskip}{0pt plus 5cm}int System\-::extend\-To (
+\begin{DoxyParamCaption}
+\item[{{\bf State} \&}]{state\-From\-In, }
+\item[{{\bf State} \&}]{state\-Towards\-In, }
+\item[{{\bf Trajectory} \&}]{trajectory\-Out, }
+\item[{bool \&}]{exact\-Connection\-Out}
+\end{DoxyParamCaption}
+)}}\label{class_system_ae6e8fe1ab14336405695ff03e09280cd}
+
+
+Returns a the cost of the trajectory that connects state\-From\-In and state\-Towards\-In. The trajectory is also returned in trajectory\-Out. 
+
+A more elaborate description.
+
+
+\begin{DoxyParams}{Parameters}
+{\em state\-From\-In} & Initial state \\
+\hline
+{\em state\-Towards\-In} & Final state \\
+\hline
+{\em trajectory\-Out} & \hyperlink{class_trajectory}{Trajectory} that starts the from the initial state and reaches near the final state. \\
+\hline
+{\em exact\-Connection\-Out} & Set to true if the initial and the final states can be connected exactly. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_system_af5fb452cbc77888fa8b237728978e5f2}{\index{System@{System}!get\-Num\-Dimensions@{get\-Num\-Dimensions}}
+\index{get\-Num\-Dimensions@{get\-Num\-Dimensions}!System@{System}}
+\subsubsection[{get\-Num\-Dimensions}]{\setlength{\rightskip}{0pt plus 5cm}int System\-::get\-Num\-Dimensions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_system_af5fb452cbc77888fa8b237728978e5f2}
+
+
+Returns the dimensionality of the Euclidean space. 
+
+A more elaborate description. \hypertarget{class_system_a3886ae2dd386330fcedbb80015c002d5}{\index{System@{System}!get\-Root\-State@{get\-Root\-State}}
+\index{get\-Root\-State@{get\-Root\-State}!System@{System}}
+\subsubsection[{get\-Root\-State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf State}\& System\-::get\-Root\-State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_system_a3886ae2dd386330fcedbb80015c002d5}
+
+
+Returns a reference to the root state. 
+
+A more elaborate description. \hypertarget{class_system_a537a5a43d127e9680ac222b313621373}{\index{System@{System}!get\-State\-Key@{get\-State\-Key}}
+\index{get\-State\-Key@{get\-State\-Key}!System@{System}}
+\subsubsection[{get\-State\-Key}]{\setlength{\rightskip}{0pt plus 5cm}int System\-::get\-State\-Key (
+\begin{DoxyParamCaption}
+\item[{{\bf State} \&}]{state\-In, }
+\item[{double $\ast$}]{state\-Key}
+\end{DoxyParamCaption}
+)}}\label{class_system_a537a5a43d127e9680ac222b313621373}
+
+
+Returns the statekey for the given state. 
+
+A more elaborate description.
+
+
+\begin{DoxyParams}{Parameters}
+{\em state\-In} & the given state \\
+\hline
+{\em state\-Key} & the key to the state. An array of dimension \hyperlink{class_system_af5fb452cbc77888fa8b237728978e5f2}{get\-Num\-Dimensions()} \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_system_ac692c12db3dae5ecde2889433157029c}{\index{System@{System}!get\-Trajectory@{get\-Trajectory}}
+\index{get\-Trajectory@{get\-Trajectory}!System@{System}}
+\subsubsection[{get\-Trajectory}]{\setlength{\rightskip}{0pt plus 5cm}int System\-::get\-Trajectory (
+\begin{DoxyParamCaption}
+\item[{{\bf State} \&}]{state\-From\-In, }
+\item[{{\bf State} \&}]{state\-To\-In, }
+\item[{std\-::list$<$ double $\ast$ $>$ \&}]{trajectory\-Out}
+\end{DoxyParamCaption}
+)}}\label{class_system_ac692c12db3dae5ecde2889433157029c}
+
+
+Returns the trajectory as a list of double arrays, each with dimension get\-Num\-Dimensions. 
+
+A more elaborate description.
+
+
+\begin{DoxyParams}{Parameters}
+{\em state\-From\-In} & Initial state \\
+\hline
+{\em state\-To\-In} & Final state \\
+\hline
+{\em trajectory\-Out} & The list of double arrays that represent the trajectory \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_system_a61f712ecec2be0d5a692016a98883505}{\index{System@{System}!is\-Reaching\-Target@{is\-Reaching\-Target}}
+\index{is\-Reaching\-Target@{is\-Reaching\-Target}!System@{System}}
+\subsubsection[{is\-Reaching\-Target}]{\setlength{\rightskip}{0pt plus 5cm}bool System\-::is\-Reaching\-Target (
+\begin{DoxyParamCaption}
+\item[{{\bf State} \&}]{state\-In}
+\end{DoxyParamCaption}
+)}}\label{class_system_a61f712ecec2be0d5a692016a98883505}
+
+
+Returns true of the given state reaches the target. 
+
+A more elaborate description. \hypertarget{class_system_af69e823ebff537fd14b7129de2d8d24d}{\index{System@{System}!sample\-State@{sample\-State}}
+\index{sample\-State@{sample\-State}!System@{System}}
+\subsubsection[{sample\-State}]{\setlength{\rightskip}{0pt plus 5cm}int System\-::sample\-State (
+\begin{DoxyParamCaption}
+\item[{{\bf State} \&}]{random\-State\-Out}
+\end{DoxyParamCaption}
+)}}\label{class_system_af69e823ebff537fd14b7129de2d8d24d}
+
+
+Returns a sample state. 
+
+A more elaborate description.
+
+
+\begin{DoxyParams}{Parameters}
+{\em random\-State\-Out} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{system_8h}{system.\-h}\end{DoxyCompactItemize}
