@@ -1,5 +1,5 @@
-#ifndef FUSION_HPP
-#define FUSION_HPP
+#ifndef RRT_HPP
+#define RRT_HPP
 
 /* Contains ROS nodehandlers and other essential methods*/
 #include <ros/ros.h>
@@ -13,6 +13,8 @@
 
 /* RRT datastructures */
 #include <rrt/Tree.hpp>
+#include <rrt/nanoflann.hpp>
+
 
 /* For getting and parsing parameters from parameter yaml files */
 #include <XmlRpcException.h>
@@ -26,18 +28,27 @@
 #include <dynamic_reconfigure/server.h>
 
 
-class RRT {
-private:
-  //members
-public:
-  bool nearestNeighbours();
-  bool collisionChecker(); // need GPU implementation
-  bool grow();
-  bool getPath();
-  int cellCost();
-  int pathCost();
+namespace RRT{
+
+  class RRTStar {
+  private:
+    //members
+  public:
+    RRTStar();
+    ~RRTStar();
+    bool sample();
+    void extend();
+    bool nearestNeighbours();
+    bool collisionChecker(); // need GPU implementation
+    bool grow();
+    bool getPath(); // using kinematics
+    int cellCost();
+    int pathCost();
+    vector<State*> path();
 
 
+
+  };
 
 
 }

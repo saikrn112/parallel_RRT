@@ -13,6 +13,7 @@
 #include <type_traits>
 #include <unordered_map>
 #include <vector>
+#include <iostream>
 
 namespace RRT {
 /**
@@ -318,9 +319,12 @@ public:
 
         int n =
             _kdtree.knnSearch(query, indices, dists, 1, flann::SearchParams());
-
-        if (distanceOut)
+        if (distanceOut){
             *distanceOut = _stateSpace->distance(state, best->state());
+            std::cout << best->state() << std::endl;
+
+        }
+
 
         T point;
         if (NULL == _arrayToT) {
