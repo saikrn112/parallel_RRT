@@ -1,4 +1,4 @@
-# RRT [![CircleCI](https://circleci.com/gh/RoboJackets/rrt.svg?style=svg)](https://circleci.com/gh/RoboJackets/rrt)
+# RRT
 
 C++ RRT (Rapidly-exploring Random Tree) implementation
 
@@ -54,6 +54,3 @@ Here are some good resources for learning more about RRTs:
 * http://www.cs.cmu.edu/~15780/readings/02iros-errt.pdf
 
 
-## License
-
-This project is licensed under the Apache License v2.0.  See the [LICENSE](LICENSE) file for more information.
