@@ -12,9 +12,7 @@
 
 
 /* RRT datastructures */
-#include <rrt/Tree.hpp>
 #include <rrt/nanoflann.hpp>
-
 
 /* For getting and parsing parameters from parameter yaml files */
 #include <XmlRpcException.h>
@@ -24,9 +22,7 @@
 
 #include <boost/bind.hpp>
 
-
 #include <dynamic_reconfigure/server.h>
-
 
 namespace RRT{
 
